@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Atakama Grow — Caldera</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#">Atakama Grow</a>
+      <nav class="main-nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button id="cartBtn" class="cart-btn">Carrito (<span id="cartCount">0</span>)</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-text">
+          <h1>Atakama Grow</h1>
+          <p class="subtitle">Grow shop en Caldera, Atacama — Galería Americano, 2º piso</p>
+          <p class="lead">Tienda inspirada en el desierto y la playa: diseños suaves y difuminados para una experiencia calma y moderna.</p>
+          <a href="#productos" class="btn primary">Ver productos</a>
+        </div>
+        <div class="hero-art"></div>
+      </div>
+    </section>
+
+    <section id="productos" class="section">
+      <div class="wrap">
+        <h2>Productos</h2>
+        <p class="muted">Categorías principales — haz clic en una categoría para ver y añadir al carrito.</p>
+
+        <div class="categories">
+          <button class="cat-btn" data-cat="bongs">Bongs</button>
+          <button class="cat-btn" data-cat="molinillos">Moledores</button>
+          <button class="cat-btn" data-cat="semillas">Semillas</button>
+          <button class="cat-btn" data-cat="fertilizantes">Fertilizantes</button>
+          <button class="cat-btn" data-cat="sustratos">Sustratos</button>
+          <button class="cat-btn" data-cat="pipas">Pipas / Hitters</button>
+          <button class="cat-btn" data-cat="bolsos">Bolsos</button>
+        </div>
+
+        <div id="productsGrid" class="products-grid">
+          <!-- Productos mostrados por JS -->
+        </div>
+
+        <div class="upload-card">
+          <h3>Sube fotos temporales (solo para mostrar en la página)</h3>
+          <p class="muted">Arrastra o selecciona imágenes para verlas en la galería de producto. Para subirlas permanentemente, sube los archivos a tu hosting / GitHub.</p>
+          <input type="file" id="imageUpload" accept="image/*" multiple />
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="section gallery">
+      <div class="wrap">
+        <h2>Galería</h2>
+        <div id="galleryGrid" class="gallery-grid">
+          <!-- Imágenes subidas aparecerán aquí -->
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section contact">
+      <div class="wrap contact-grid">
+        <div>
+          <h3>Visítanos</h3>
+          <p>Galería Americano, 2° piso — Centro de Caldera, Atacama</p>
+          <p class="muted">Horario: 11:00–15:00 / 17:00–20:00</p>
+
+          <div class="socials">
+            <a href="https://instagram.com/atakamagrow" target="_blank" class="social">
+              <img src="images/insta.svg" alt="Instagram" /> @atakamagrow
+            </a>
+            <a href="https://facebook.com/AtakamaGrow" target="_blank" class="social">
+              <img src="images/facebook.svg" alt="Facebook" /> Atakama Grow
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3>Contacto rápido</h3>
+          <form id="contactForm">
+            <label>Nombre</label>
+            <input type="text" id="name" required />
+            <label>Correo o WhatsApp</label>
+            <input type="text" id="contactInfo" placeholder="ej: +569..." required />
+            <label>Mensaje</label>
+            <textarea id="message" rows="4" required></textarea>
+            <button type="submit" class="btn">Enviar mensaje</button>
+          </form>
+
+          <p class="muted small">Cuando alguien haga una orden, podrán "Solicitar compra" y recibirás una notificación por correo (mailto) para que puedas gestionar el pedido.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Carrito modal -->
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <button class="close" id="closeCart">&times;</button>
+      <h3>Tu carrito</h3>
+      <div id="cartItems"></div>
+      <div class="cart-actions">
+        <button id="checkoutBtn" class="btn primary">Solicitar compra (notificar)</button>
+        <button id="clearCart" class="btn">Vaciar</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-left">
+        <strong>Atakama Grow</strong>
+        <p>Caldera, Atacama — Galería Americano, 2° piso</p>
+      </div>
+      <div class="footer-right">
+        <a href="https://instagram.com/atakamagrow" target="_blank" class="foot-social">
+          <img src="images/insta.svg" alt="Instagram" /> @atakamagrow
+        </a>
+        <a href="https://facebook.com/AtakamaGrow" target="_blank" class="foot-social">
+          <img src="images/facebook.svg" alt="Facebook" /> Atakama Grow
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
